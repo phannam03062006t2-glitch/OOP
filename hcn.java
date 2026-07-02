@@ -3,15 +3,17 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.File;
 
-public class main {
+public class hcn {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int t = sc.nextInt();
+        int w = sc.nextInt();
+        int h = sc.nextInt();
 
-        while (t-- > 0) {
-            long n = sc.nextInt();
-            System.out.println((n + 1) * n / 2);
+        if (w <= 0 || h <= 0) {
+            System.out.println(0);
+        } else {
+            System.out.println(2 * (w + h) + " " + w * h);
         }
         sc.close();
     }
