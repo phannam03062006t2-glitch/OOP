@@ -1,12 +1,20 @@
 import java.util.Scanner;
 import java.io.FileWriter;
+import java.io.IOException;
+import java.io.File;
 
 public class main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        System.out.print("Hello PTIT.");
+        try {
+            Scanner sc = new Scanner(new File("Hello.txt"));
 
-        sc.close();
+            while(sc.hasNext()){
+                System.out.println(sc.nextLine());
+            }
+        }
+        catch(IOException){
+
+        }
     }
 }
